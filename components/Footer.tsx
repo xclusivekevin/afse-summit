@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Form from "@/components/Form";
 
 const NAV = [["Home", "/"], ["About", "/about"], ["Summit 2026", "/summit-2026"], ["Speakers", "/speakers"], ["United By Food", "/united-by-food"], ["Contact", "/contact"]];
 const Dot = () => <span aria-hidden className="mr-2 inline-block h-3 w-3 rounded-full border-2 border-[color:var(--color-action)] align-middle" />;
@@ -23,12 +24,11 @@ export default function Footer() {
         </div>
         <div>
           <h2 className="mb-4 text-[16px] font-semibold text-black">Stay Informed</h2>
-          <form action="mailto:summit@afrifoodnetwork.com" method="post" encType="text/plain" className="space-y-2">
+          <Form name="Stay Informed (footer)" submit="Stay Informed" thanks="You are on the list." className="space-y-2" full>
             <input className="input" name="first_name" placeholder="First name" aria-label="First name" />
             <input className="input" name="email" type="email" placeholder="Email address" aria-label="Email address" required />
-            <button type="submit" className="btn btn--primary w-full justify-center">Stay Informed</button>
-            <p className="text-[11px]">No spam. Updates on speakers, programme, and partnership opportunities.</p>
-          </form>
+            </Form>
+          <p className="text-[11px]">No spam. Updates on speakers, programme, and partnership opportunities.</p>
         </div>
       </div>
       <div className="border-t border-[color:var(--color-border)]">
