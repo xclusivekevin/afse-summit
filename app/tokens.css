@@ -1,0 +1,58 @@
+/* AFSE Design System v2.0 · tokens · 20 Sep 2026
+   Primitives carry the afse- prefix. Components consume the semantic layer only. */
+:root {
+  /* primitives · colour [LIVE unless noted] */
+  --afse-red-600: #B60825;
+  --afse-red-700: #96061E;          /* derived */
+  --afse-coral-300: #FF8F8A;
+  --afse-gold-600: #B68908;         /* reserved */
+  --afse-green-600: #3F8109;        /* reserved */
+  --afse-black: #000000;
+  --afse-ink-900: #0D0D0D;          /* derived */
+  --afse-grey-700: #54595F;
+  --afse-grey-600: #7A7A7A;
+  --afse-grey-400: #C4C4C4;
+  --afse-grey-100: #F8F8F8;
+  --afse-white: #FFFFFF;
+
+  /* semantic · colour */
+  --color-bg: var(--afse-white);
+  --color-bg-alt: var(--afse-grey-100);
+  --color-bg-dark: var(--afse-black);
+  --color-text: var(--afse-grey-600);
+  --color-text-strong: var(--afse-grey-700);
+  --color-heading: var(--afse-black);
+  --color-text-on-dark: rgba(255,255,255,0.82);
+  --color-muted-on-dark: rgba(255,255,255,0.6);
+  --color-action: var(--afse-red-600);
+  --color-action-hover: var(--afse-red-700);
+  --color-frame: var(--afse-coral-300);
+  --color-border: var(--afse-grey-400);
+  --color-divider: #F0F0F0;
+
+  /* type */
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-body: "Montserrat", system-ui, sans-serif;
+  --font-quote: "Roboto Slab", Georgia, serif;
+  --text-h1: clamp(36px, 4.5vw, 56px);
+  --text-h2: clamp(30px, 3vw, 40px);
+  --text-body: 15px;
+  --text-small: 13px;
+  --text-eyebrow: 12px;
+  --text-button: 13px;
+
+  /* space · 4px base */
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+  --section-y: 80px;
+  --section-y-mobile: 56px;
+  --container: 1140px;
+
+  /* shape · elevation */
+  --radius-pill: 999px; --radius-card: 12px; --radius-image: 16px; --radius-button: 4px;
+  --shadow-card: 0 20px 50px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 24px 60px rgba(0,0,0,0.14);
+
+  /* layers */
+  --z-base: 0; --z-raised: 10; --z-nav: 50; --z-overlay: 100;
+}

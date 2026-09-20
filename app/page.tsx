@@ -1,0 +1,125 @@
+import Image from "next/image";
+import { Eyebrow, Btn, Arrow, Icon } from "@/components/ui";
+
+const THEMES = [
+  ["leaf", "Sustainable Food Systems", "Building resilient food futures, from farm to table."],
+  ["landmark", "Gastronomic Tourism & Heritage", "Food as cultural identity, diplomacy, and economic driver."],
+  ["briefcase", "Entrepreneurship & Trade", "Creating pathways for African food enterprises in global markets."],
+  ["mic", "Media & Cultural Narrative", "Reshaping how Africa's food story is told to the world."],
+  ["users", "Youth & Diaspora", "The next generation's role in Africa's food ecosystem."],
+];
+const PROGRAMME = [
+  ["screen", "Keynotes & Panels", "High-level conversations shaping Africa's food future from a global stage."],
+  ["flask", "Breakout Labs", "Hands-on sessions for entrepreneurs, innovators, and food professionals."],
+  ["landmark", "Policy Roundtables", "High-level conversations shaping Africa's food future from a global stage."],
+  ["phone", "Brand & Innovation Expo", "African and UK food brands, agritech ventures, and investment-ready businesses."],
+  ["target", "Culinary Unity Experience", "A cultural showcase celebrating the diversity and power of African food heritage."],
+];
+const STATS = [["calendar", "October 2026", "London, UK"], ["layers", "5 Summit Themes", "Policy to Culture"], ["globe", "Black History Month", "UK Edition"], ["handshake", "AFN X Uziiza", "Partnership"]];
+
+export default function Home() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="dark-section relative flex min-h-[640px] items-center overflow-hidden pt-20" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.85)), url(/img/hero-red-curtain.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="container py-24 text-center">
+          <Eyebrow dark>London, United Kingdom · October 2026 · Black History Month</Eyebrow>
+          <h1 className="mx-auto mt-5 max-w-3xl text-[length:var(--text-h1)] leading-[1.1]">African Food Summit & Expo UK 2026</h1>
+          <p className="mx-auto mt-5 max-w-2xl text-[15px] text-white/80">Africa&apos;s leading food summit comes to London, convening the policymakers, innovators, and cultural leaders shaping the global food future.</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Btn href="/partner-with-us">Become A Sponsor <Arrow /></Btn>
+            <Btn href="/summit-2026" variant="outline-dark">Explore the Summit</Btn>
+          </div>
+        </div>
+      </section>
+      {/* Stat strip */}
+      <section className="dark-section">
+        <div className="container grid grid-cols-2 gap-6 py-8 md:grid-cols-4">
+          {STATS.map(([i, l, s]) => (
+            <div key={l} className="flex items-center gap-3">
+              <Icon name={i} size={26} />
+              <div><p className="font-[family-name:var(--font-display)] text-[16px] font-semibold text-white">{l}</p><p className="text-[11px] uppercase tracking-wide text-white/60">{s}</p></div>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Strategic platform */}
+      <section className="section">
+        <div className="container grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <Eyebrow>More Than A Conference</Eyebrow>
+            <h2 className="mt-4 text-[length:var(--text-h2)]">A Strategic Platform for Africa&apos;s Food Future</h2>
+            <p className="prose-justify mt-5">AFSE UK 2026 is the international edition of Africa&apos;s leading food policy and thought leadership summit, brought to London for Black History Month 2026. It connects policymakers, investors, culinary innovators, diaspora entrepreneurs, and cultural institutions across Africa and the United Kingdom to advance a shared agenda for Africa&apos;s food future.</p>
+            <p className="quote mt-5">This is not a celebration. It is a coordination.</p>
+          </div>
+          <div className="card p-8">
+            <ul className="divide-y divide-[color:var(--color-divider)]">
+              {THEMES.map(([i, t, d]) => (
+                <li key={t} className="flex gap-4 py-4 first:pt-0 last:pb-0">
+                  <Icon name={i} size={20} className="mt-1 shrink-0" />
+                  <div><h3 className="text-[14px] font-semibold">{t}</h3><p className="text-[13px]">{d}</p></div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+      {/* Why London */}
+      <section className="relative py-24" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(/img/london.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="container">
+          <div className="mx-auto max-w-[680px] rounded-xl border border-white/15 bg-black/35 p-8 text-center md:p-10">
+            <h2 className="text-[length:var(--text-h2)] text-white">Why London? <span className="text-[color:var(--color-action)]">Why Now?</span></h2>
+            <p className="mt-5 text-[14px] text-white/85">Africa&apos;s food ecosystem is at an inflection point. The continent holds extraordinary agricultural potential and one of the world&apos;s richest culinary heritages, yet its food story remains underrepresented in global conversations. That is changing. African food is entering the mainstream in restaurants, in retail, in policy, and in cultural dialogue. London is home to over 1.5 million people of African heritage, a thriving African restaurant and food culture scene, and institutional networks spanning government, development finance, and creative industries, it is where Africa&apos;s food leadership meets global reach. AFSE UK 2026 is where that leadership convenes.</p>
+          </div>
+        </div>
+      </section>
+      {/* Programme */}
+      <section className="section">
+        <div className="container text-center">
+          <Eyebrow>Programme</Eyebrow>
+          <h2 className="mt-4 text-[length:var(--text-h2)]">Inside AFSE UK 2026</h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+            {PROGRAMME.map(([i, t, d]) => (
+              <div key={t} className="card px-5 py-8">
+                <Icon name={i} size={28} className="mx-auto" />
+                <h3 className="mt-4 text-[15px] font-semibold">{t}</h3>
+                <p className="mt-2 text-[12px]">{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Ecosystem */}
+      <section className="section alt-section">
+        <div className="container grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <Eyebrow>An African Food Network X Uziiza Production</Eyebrow>
+            <h2 className="mt-4 text-[length:var(--text-h2)]">Part of Africa&apos;s Largest Food Ecosystem</h2>
+            <p className="prose-justify mt-5">AFSE UK 2026 is produced by the African Food Network, the continental platform dedicated to advancing African culinary heritage, food enterprise, and cultural identity across the world. AFN is the creator of the African Food & Drinks Festival, two-time winner of Africa&apos;s Best Culinary Festival at the World Culinary Awards (2024 and 2025), and the United by Food documentary initiative.</p>
+            <ul className="list-red mt-5 space-y-1">
+              <li>Preserving culinary heritage across generations</li>
+              <li>Strengthening youth and diaspora participation in food ecosystems</li>
+              <li>Promoting African cuisine as culture, diplomacy, and commerce</li>
+              <li>Supporting institutional and cross-border collaboration</li>
+            </ul>
+          </div>
+          <div className="flex justify-center lg:justify-end lg:pr-4">
+            <div className="photo-frame"><Image src="/img/African-Food.jpg" alt="Overhead view of a shared African food spread" width={520} height={520} className="aspect-square w-full max-w-[480px] object-cover" /></div>
+          </div>
+        </div>
+      </section>
+      {/* Dark CTA */}
+      <section className="dark-section relative py-28 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
+        <div className="container">
+          <Eyebrow dark>Now accepting partnership applications</Eyebrow>
+          <h2 className="mx-auto mt-4 max-w-2xl text-[length:var(--text-h2)] leading-[1.2] text-white">October 2026. London. Black History Month.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[14px] text-white/85">AFSE UK 2026 is now open for partnership engagement. We are working with governments, embassies, development institutions, and private sector brands to build Africa&apos;s most significant international food summit.</p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Btn href="mailto:summit@afrifoodnetwork.com?subject=I%20would%20like%20to%20Request%20for%20the%20Partnership%20Deck">Request The Partnership Deck <Arrow /></Btn>
+            <Btn href="/partner-with-us" variant="outline-dark">Become A Partner</Btn>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
