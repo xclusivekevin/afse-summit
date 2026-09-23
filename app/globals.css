@@ -22,10 +22,12 @@
   .btn--outline-light:hover { background: rgba(0,0,0,0.06); }
   .btn:focus-visible { outline: 2px solid var(--color-action); outline-offset: 2px; }
   .card { background: #fff; border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
-  .prose-justify { text-align: justify; }
-  @media (max-width: 767px) { .prose-justify { text-align: left; } }
+  .prose-justify { text-align: left; max-width: 68ch; }
+  .measure { max-width: 68ch; }
+  @media (max-width: 767px) { .prose-justify { text-align: left; max-width: 68ch; }
+  .measure { max-width: 68ch; } }
   .quote { font-family: var(--font-quote); font-style: italic; color: var(--color-heading); }
-  .list-red li { position: relative; padding-left: 22px; font-size: var(--text-small); }
+  .list-red li { position: relative; padding-left: 22px; font-size: var(--text-small); max-width: 68ch; }
   .list-red li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 10px; height: 10px; border: 2px solid var(--color-action); border-radius: 50%; }
   .input { width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius-button); padding: 10px 14px; font-family: var(--font-body); font-size: var(--text-small); color: #000; background: #fff; }
   .input::placeholder { color: var(--color-text); }
@@ -36,4 +38,10 @@
   .photo-frame { position: relative; display: inline-block; }
   .photo-frame::after { content: ""; position: absolute; inset: 14px -14px -14px 14px; background: var(--color-frame); border-radius: var(--radius-image); z-index: -1; }
   .photo-frame img { border-radius: var(--radius-image); display: block; }
+
 }
+
+/* T-15: cap the measure. Unlayered on purpose so it beats Tailwind's max-w-* utilities.
+   64ch of the "0" glyph lands at roughly 70 real characters. */
+main p, main li, main dd { max-width: 64ch; }
+main p.mx-auto, main li.mx-auto, main dd.mx-auto { margin-inline: auto; }

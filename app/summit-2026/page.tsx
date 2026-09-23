@@ -52,7 +52,7 @@ export default function Summit2026() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">{INSIDE.map(([i, t, d]) => <div key={t} className="card px-5 py-8"><Icon name={i} size={28} className="mx-auto" /><h3 className="mt-4 text-[15px] font-semibold">{t}</h3><p className="mt-2 text-[12px]">{d}</p></div>)}</div>
         </div>
       </section>
-      <section className="dark-section py-24 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="dark-section py-24 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container">
           <h2 className="text-[length:var(--text-h2)] text-white">Be Part of AFSE UK 2026</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[14px] text-white/85">Whether you are a government body, a development institution, a food brand, or an individual leader, there is a role for you at Africa&apos;s most important international food summit in 2026.</p>

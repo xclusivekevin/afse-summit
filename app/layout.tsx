@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "Africa's leading food summit comes to London, convening the policymakers, innovators, and cultural leaders shaping the global food future. Become A Sponsor.",
   alternates: { canonical: "./" },
   icons: { icon: "/img/AFSE-Logo-01.png" },
-  openGraph: { type: "website", locale: "en_GB", url: "./", siteName: "African Food Summit & Expo", images: ["/img/Summit-Hero-1-scaled.png"] },
+  openGraph: { type: "website", locale: "en_GB", url: "./", siteName: "African Food Summit & Expo" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -55,7 +55,7 @@ export default function About() {
           <p className="mt-4">Through AFSE, that vision becomes action, in structured dialogue, in measurable partnerships, and in long-term institutional relationships.</p>
         </div>
       </section>
-      <section className="dark-section py-24 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="dark-section py-24 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container">
           <Eyebrow dark>Looking Ahead</Eyebrow>
           <h2 className="mt-4 text-[length:var(--text-h2)] text-white">The First of Many</h2>

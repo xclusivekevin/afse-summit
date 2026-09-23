@@ -14,7 +14,7 @@ export function Arrow() { return <span aria-hidden>→</span>; }
 /** Page hero used by inner pages: black band with red curtain photo */
 export function PageHero({ eyebrow, title, sub, children }: { eyebrow?: string; title: ReactNode; sub?: ReactNode; children?: ReactNode }) {
   return (
-    <section className="dark-section relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-24" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.9)), url(/img/hero-red-curtain.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <section className="dark-section relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-24" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.68), rgba(0,0,0,0.92)), url(/img/hero-red-curtain.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className="container text-center">
         {eyebrow && <Eyebrow dark>{eyebrow}</Eyebrow>}
         <h1 className="mx-auto mt-4 max-w-4xl text-[length:var(--text-h1)] leading-[1.1]">{title}</h1>

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="dark-section relative flex min-h-[640px] items-center overflow-hidden pt-20" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.85)), url(/img/hero-red-curtain.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="dark-section relative flex min-h-[640px] items-center overflow-hidden pt-20" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.88)), url(/img/hero-red-curtain.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container py-24 text-center">
           <Eyebrow dark>London, United Kingdom · October 2026 · Black History Month</Eyebrow>
           <h1 className="mx-auto mt-5 max-w-3xl text-[length:var(--text-h1)] leading-[1.1]">African Food Summit & Expo UK 2026</h1>
@@ -65,11 +65,20 @@ export default function Home() {
         </div>
       </section>
       {/* Why London */}
-      <section className="relative py-24" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(/img/london.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="relative py-24" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url(/img/london.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container">
-          <div className="mx-auto max-w-[680px] rounded-xl border border-white/15 bg-black/35 p-8 text-center md:p-10">
-            <h2 className="text-[length:var(--text-h2)] text-white">Why London? <span className="text-[color:var(--color-action)]">Why Now?</span></h2>
-            <p className="mt-5 text-[14px] text-white/85">Africa&apos;s food ecosystem is at an inflection point. The continent holds extraordinary agricultural potential and one of the world&apos;s richest culinary heritages, yet its food story remains underrepresented in global conversations. That is changing. African food is entering the mainstream in restaurants, in retail, in policy, and in cultural dialogue. London is home to over 1.5 million people of African heritage, a thriving African restaurant and food culture scene, and institutional networks spanning government, development finance, and creative industries, it is where Africa&apos;s food leadership meets global reach. AFSE UK 2026 is where that leadership convenes.</p>
+          <div className="mx-auto max-w-[760px] rounded-xl border border-white/15 bg-black/40 p-8 text-center md:p-10">
+            <h2 className="text-[length:var(--text-h2)] text-white">Why London? <span className="text-[color:var(--color-action-on-dark)]">Why Now?</span></h2>
+            <p className="mx-auto mt-5 max-w-xl text-[16px] text-white/85">Africa&apos;s food ecosystem is at an inflection point, and its story is still told by other people.</p>
+            <dl className="mt-8 grid gap-6 sm:grid-cols-3">
+              {[["1.5m", "people of African heritage in London"], ["5", "Summit themes, policy to culture"], ["Oct 2026", "Black History Month, United Kingdom"]].map(([n, l]) => (
+                <div key={l}>
+                  <dt className="font-[family-name:var(--font-display)] text-[32px] font-semibold leading-none text-[color:var(--color-action-on-dark)]">{n}</dt>
+                  <dd className="mt-2 text-[13px] leading-[1.5] text-white/80">{l}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mx-auto mt-8 max-w-xl text-[15px] text-white/85">African food is entering the mainstream in restaurants, in retail, in policy and in cultural dialogue. London is where Africa&apos;s food leadership meets global reach, and AFSE UK 2026 is where that leadership convenes.</p>
           </div>
         </div>
       </section>
@@ -109,7 +118,7 @@ export default function Home() {
         </div>
       </section>
       {/* Dark CTA */}
-      <section className="dark-section relative py-28 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="dark-section relative py-28 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container">
           <Eyebrow dark>Now accepting partnership applications</Eyebrow>
           <h2 className="mx-auto mt-4 max-w-2xl text-[length:var(--text-h2)] leading-[1.2] text-white">October 2026. London. Black History Month.</h2>

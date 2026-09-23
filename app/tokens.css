@@ -3,6 +3,8 @@
 :root {
   /* primitives · colour [LIVE unless noted] */
   --afse-red-600: #B60825;
+  /* red-600 is 2.6:1 over the dark photo sections; this is the same red lightened to 4.9:1 */
+  --afse-red-on-dark: #F0455C;
   --afse-red-700: #96061E;          /* derived */
   --afse-coral-300: #FF8F8A;
   --afse-gold-600: #B68908;         /* reserved */
@@ -19,12 +21,14 @@
   --color-bg: var(--afse-white);
   --color-bg-alt: var(--afse-grey-100);
   --color-bg-dark: var(--afse-black);
-  --color-text: var(--afse-grey-600);
+  /* grey-600 is 4.3:1 on the off-white sections, which fails AA; grey-700 is 7.0:1 */
+  --color-text: var(--afse-grey-700);
   --color-text-strong: var(--afse-grey-700);
   --color-heading: var(--afse-black);
   --color-text-on-dark: rgba(255,255,255,0.82);
   --color-muted-on-dark: rgba(255,255,255,0.6);
   --color-action: var(--afse-red-600);
+  --color-action-on-dark: var(--afse-red-on-dark);
   --color-action-hover: var(--afse-red-700);
   --color-frame: var(--afse-coral-300);
   --color-border: var(--afse-grey-400);

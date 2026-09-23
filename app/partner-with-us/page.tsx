@@ -44,7 +44,7 @@ export default function Partner() {
       <section className="section alt-section">
         <div className="container max-w-3xl"><h2 className="text-[length:var(--text-h2)]">Outcomes We Can Build Together</h2><ul className="list-red mt-6 space-y-2">{OUTCOMES.map((o) => <li key={o}>{o}</li>)}</ul></div>
       </section>
-      <section className="dark-section py-24 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
+      <section className="dark-section py-24 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container"><h2 className="text-[length:var(--text-h2)] text-white">Start the Conversation</h2><p className="mx-auto mt-4 max-w-2xl text-[14px] text-white/85">To request the partnership deck or discuss a collaboration, contact the Summit team.</p><div className="mt-8 flex flex-wrap justify-center gap-4"><Btn href={DECK}>Request Partnership Deck <Arrow /></Btn><Btn href="mailto:summit@afrifoodnetwork.com" variant="outline-dark">summit@afrifoodnetwork.com</Btn></div></div>
       </section>
     </>
