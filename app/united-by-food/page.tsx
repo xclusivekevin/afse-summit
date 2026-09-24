@@ -35,7 +35,7 @@ export default function UBF() {
       <section className="section">
         <div className="container grid gap-12 lg:grid-cols-2">
           <div>
-            <Eyebrow>Pilot Episode</Eyebrow><h2 className="mt-4 text-[length:var(--text-h2)]">A Continental Table</h2>
+            <h2 className="mt-4 text-[length:var(--text-h2)]">A Continental Table</h2>
             <p className="mt-4 font-semibold text-black">What happens when Africa sees itself through food?</p>
             <ul className="list-red mt-3 space-y-1"><li>Shared culinary threads across regions and diaspora communities worldwide</li><li>How gastronomy carries memory, migration, and meaning across generations</li><li>The role of chefs, institutions, and cultural platforms in shaping food identity</li><li>Why African cuisine is rising globally, and the responsibilities that come with that</li></ul>
             <p className="mt-4">The pilot episode was developed with 15+ contributors including chefs, cultural leaders, policymakers, and diaspora voices, across multiple African countries and diaspora communities.</p>
@@ -52,7 +52,7 @@ export default function UBF() {
       </section>
       <section className="section alt-section">
         <div className="container">
-          <div className="text-center"><Eyebrow>Collaborate</Eyebrow><h2 className="mt-4 text-[length:var(--text-h2)]">Partner With United by Food</h2></div>
+          <div className="text-center"><h2 className="mt-4 text-[length:var(--text-h2)]">Partner With United by Food</h2></div>
           <div className="mt-10 grid gap-5 lg:grid-cols-3">{PARTNER.map(([i, t, items]) => <div key={t} className="card p-7"><Icon name={i} size={26} /><h3 className="mt-3 text-[16px] font-semibold">{t}</h3><ul className="list-red mt-4 space-y-1">{items.map((x) => <li key={x}>{x}</li>)}</ul></div>)}</div>
           <div className="mt-10 text-center"><Btn href="mailto:summit@afrifoodnetwork.com">Screening & Partnership Enquiries <Arrow /></Btn></div>
         </div>

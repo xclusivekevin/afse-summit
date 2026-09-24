@@ -1,0 +1,23 @@
+/** AFSE UK 2026 — confirmed 24 Sep 2026 from the Eventbrite listing. */
+export const AFSE = {
+  name: "African Food Summit & Expo UK 2026",
+  theme: "Africa's Food Story: Yesterday. Today. Tomorrow.",
+  dateLong: "Thursday 22 October 2026",
+  dateShort: "22 October 2026",
+  time: "4:00pm – 8:00pm",
+  startISO: "2026-10-22T16:00:00+01:00",
+  endISO: "2026-10-22T20:00:00+01:00",
+  venue: "Samsung KX",
+  venueFull: "Samsung King's Cross",
+  street: "1 Stable Street",
+  locality: "London",
+  postcode: "N1C 4DQ",
+  lat: 51.5361332,
+  lng: -0.1260176,
+  tickets: "https://www.eventbrite.co.uk/e/african-food-summit-expo-uk-2026-tickets-2002117431132",
+  price: "Free to attend, registration required",
+  panel: "How can Africa use technology to preserve its food heritage while building the food systems of tomorrow?",
+  expect: ["Keynote Address", "Guest Speakers", "Expert Panel Discussion", "Africa Unity Dish", "AFSE Recognition", "Networking", "Food, Culture & Innovation Conversations"],
+  presentedBy: "Uziiza, in collaboration with African Food Network",
+  supportedBy: ["African Tourism Board", "African Union"],
+};

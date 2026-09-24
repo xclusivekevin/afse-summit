@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Eyebrow, Btn, Arrow, Icon } from "@/components/ui";
+import { AFSE } from "@/lib/event";
 
 const THEMES = [
   ["leaf", "Sustainable Food Systems", "Building resilient food futures, from farm to table."],
@@ -15,7 +16,7 @@ const PROGRAMME = [
   ["phone", "Brand & Innovation Expo", "African and UK food brands, agritech ventures, and investment-ready businesses."],
   ["target", "Culinary Unity Experience", "A cultural showcase celebrating the diversity and power of African food heritage."],
 ];
-const STATS = [["calendar", "October 2026", "London, UK"], ["layers", "5 Summit Themes", "Policy to Culture"], ["globe", "Black History Month", "UK Edition"], ["handshake", "AFN X Uziiza", "Partnership"]];
+const STATS = [["calendar", "22 October 2026", "4:00pm - 8:00pm"], ["pin", "Samsung KX", "1 Stable Street, London"], ["globe", "Black History Month", "UK Debut"], ["handshake", "Free to attend", "Registration required"]];
 
 export default function Home() {
   return (
@@ -23,11 +24,12 @@ export default function Home() {
       {/* Hero */}
       <section className="dark-section relative flex min-h-[640px] items-center overflow-hidden pt-20" style={{ backgroundImage: "linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.88)), url(/img/hero-red-curtain.jpeg)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container py-24 text-center">
-          <Eyebrow dark>London, United Kingdom · October 2026 · Black History Month</Eyebrow>
+          <Eyebrow dark>{AFSE.dateLong} · {AFSE.venue}, London · Black History Month</Eyebrow>
           <h1 className="mx-auto mt-5 max-w-3xl text-[length:var(--text-h1)] leading-[1.1]">African Food Summit & Expo UK 2026</h1>
-          <p className="mx-auto mt-5 max-w-2xl text-[15px] text-white/80">Africa&apos;s leading food summit comes to London, convening the policymakers, innovators, and cultural leaders shaping the global food future.</p>
+          <p className="mx-auto mt-4 font-[family-name:var(--font-display)] text-[18px] font-semibold text-white md:text-[22px]">{AFSE.theme}</p>
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] text-white/80">Africa&apos;s leading food summit makes its UK debut, convening the policymakers, innovators and cultural leaders shaping the global food future. Free to attend, registration required.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Btn href="/partner-with-us">Become A Sponsor <Arrow /></Btn>
+            <Btn href={AFSE.tickets}>Get Your Free Ticket <Arrow /></Btn>
             <Btn href="/summit-2026" variant="outline-dark">Explore the Summit</Btn>
           </div>
         </div>
@@ -47,10 +49,9 @@ export default function Home() {
       <section className="section">
         <div className="container grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <Eyebrow>More Than A Conference</Eyebrow>
-            <h2 className="mt-4 text-[length:var(--text-h2)]">A Strategic Platform for Africa&apos;s Food Future</h2>
+            <h2 className="text-[length:var(--text-h2)]">A Strategic Platform for Africa&apos;s Food Future</h2>
             <p className="prose-justify mt-5">AFSE UK 2026 is the international edition of Africa&apos;s leading food policy and thought leadership summit, brought to London for Black History Month 2026. It connects policymakers, investors, culinary innovators, diaspora entrepreneurs, and cultural institutions across Africa and the United Kingdom to advance a shared agenda for Africa&apos;s food future.</p>
-            <p className="quote mt-5">This is not a celebration. It is a coordination.</p>
+            <p className="mt-5 text-[15px] font-semibold text-[color:var(--color-heading)]">The Summit is free to attend. Registration is required.</p>
           </div>
           <div className="card p-8">
             <ul className="divide-y divide-[color:var(--color-divider)]">
@@ -85,14 +86,14 @@ export default function Home() {
       {/* Programme */}
       <section className="section">
         <div className="container text-center">
-          <Eyebrow>Programme</Eyebrow>
-          <h2 className="mt-4 text-[length:var(--text-h2)]">Inside AFSE UK 2026</h2>
+          <h2 className="text-[length:var(--text-h2)]">Inside AFSE UK 2026</h2>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {PROGRAMME.map(([i, t, d]) => (
-              <div key={t} className="card px-5 py-8">
-                <Icon name={i} size={28} className="mx-auto" />
+            {PROGRAMME.map(([i, t, d], n) => (
+              <div key={t} className="card flex flex-col px-5 py-8 transition-shadow hover:shadow-[var(--shadow-card-hover)]">
+                <p className="font-[family-name:var(--font-display)] text-[13px] font-semibold text-[color:var(--color-action)]">{String(n + 1).padStart(2, "0")}</p>
+                <Icon name={i} size={28} className="mx-auto mt-3" />
                 <h3 className="mt-4 text-[15px] font-semibold">{t}</h3>
-                <p className="mt-2 text-[12px]">{d}</p>
+                <p className="mt-2 text-[13px]">{d}</p>
               </div>
             ))}
           </div>
@@ -102,8 +103,8 @@ export default function Home() {
       <section className="section alt-section">
         <div className="container grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <Eyebrow>An African Food Network X Uziiza Production</Eyebrow>
-            <h2 className="mt-4 text-[length:var(--text-h2)]">Part of Africa&apos;s Largest Food Ecosystem</h2>
+            <h2 className="text-[length:var(--text-h2)]">Part of Africa&apos;s Largest Food Ecosystem</h2>
+            <p className="mt-3 text-[13px] uppercase tracking-[0.12em] text-[color:var(--color-action)]">An African Food Network &times; Uziiza production</p>
             <p className="prose-justify mt-5">AFSE UK 2026 is produced by the African Food Network, the continental platform dedicated to advancing African culinary heritage, food enterprise, and cultural identity across the world. AFN is the creator of the African Food & Drinks Festival, two-time winner of Africa&apos;s Best Culinary Festival at the World Culinary Awards (2024 and 2025), and the United by Food documentary initiative.</p>
             <ul className="list-red mt-5 space-y-1">
               <li>Preserving culinary heritage across generations</li>
@@ -117,6 +118,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Pulled quote: the best line on the site, given room */}
+      <section className="dark-section py-20">
+        <div className="container text-center">
+          <blockquote className="mx-auto max-w-3xl font-[family-name:var(--font-quote)] text-[26px] italic leading-[1.35] text-white md:text-[36px]">
+            &ldquo;This is not a celebration. It is a coordination.&rdquo;
+          </blockquote>
+          <p className="mt-5 text-[13px] uppercase tracking-[0.14em] text-white/60">African Food Summit &amp; Expo</p>
+        </div>
+      </section>
+
       {/* Dark CTA */}
       <section className="dark-section relative py-28 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container">

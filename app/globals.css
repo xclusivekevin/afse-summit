@@ -36,8 +36,9 @@
   .dark-section h1, .dark-section h2, .dark-section h3 { color: #fff; }
   .alt-section { background: var(--color-bg-alt); color: var(--color-text-strong); }
   .photo-frame { position: relative; display: inline-block; }
-  .photo-frame::after { content: ""; position: absolute; inset: 14px -14px -14px 14px; background: var(--color-frame); border-radius: var(--radius-image); z-index: -1; }
-  .photo-frame img { border-radius: var(--radius-image); display: block; }
+  /* z-index:-1 painted the coral behind the section background, so it vanished on alt sections */
+  .photo-frame::after { content: ""; position: absolute; inset: 14px -14px -14px 14px; background: var(--color-frame); border-radius: var(--radius-image); }
+  .photo-frame img { position: relative; z-index: 1; border-radius: var(--radius-image); display: block; }
 
 }
 
@@ -45,3 +46,5 @@
    64ch of the "0" glyph lands at roughly 70 real characters. */
 main p, main li, main dd { max-width: 64ch; }
 main p.mx-auto, main li.mx-auto, main dd.mx-auto { margin-inline: auto; }
+/* the cap shrinks the box, so centred containers keep their paragraphs centred */
+main .text-center p, main .text-center li, main .text-center dd, main .text-center blockquote { margin-inline: auto; }

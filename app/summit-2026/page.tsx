@@ -1,9 +1,10 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { Eyebrow, Btn, Arrow, Icon, PageHero } from "@/components/ui";
-export const metadata: Metadata = { title: "Summit 2026", description: "Africa and the Future of Food: Leadership, Sustainability, and Global Impact. October 2026, London, Black History Month UK." };
+import { AFSE } from "@/lib/event";
+export const metadata: Metadata = { title: "Summit 2026", description: "Africa's Food Story: Yesterday. Today. Tomorrow. Thursday 22 October 2026, Samsung KX London. Free to attend, registration required." };
 
-const EXPECT = ["High-level keynote addresses from Africa and UK food leadership", "Five thematic panel discussions; one per Summit Pillar", "Policy roundtables with government and institutional representatives", "African food brand expo and innovation showcase", "Culinary Unity Experience; a cultural celebration of African food diversity", "African Food Heritage Recognition; five honourees from across Africa and the diaspora", "Structured networking connecting investors, entrepreneurs, and cultural leaders"];
+const EXPECT = AFSE.expect;
 const THEMES = [
   ["leaf", "Sustainable Food Systems & Food Security", "African approaches to resilient, sustainable food production, and the lessons they offer a world under pressure."],
   ["landmark", "Gastronomic Tourism & Culinary Heritage", "Food as cultural identity, economic driver, and diplomatic asset. Africa's cuisine as a global tourism proposition."],
@@ -22,15 +23,19 @@ const INSIDE = [
 export default function Summit2026() {
   return (
     <>
-      <PageHero eyebrow="October 2026 · London, United Kingdom · Black History Month UK" title="African Food Summit & Expo UK 2026" sub="Africa and the Future of Food: Leadership, Sustainability, and Global Impact" />
+      <PageHero eyebrow={`${AFSE.dateLong} · ${AFSE.time} · ${AFSE.venue}, London`} title="African Food Summit & Expo UK 2026" sub={<><p className="font-[family-name:var(--font-display)] text-[20px] font-semibold text-white md:text-[26px]">{AFSE.theme}</p><p className="mt-3">{AFSE.price}</p></>}>
+        <Btn href={AFSE.tickets}>Get Your Free Ticket <Arrow /></Btn>
+        <Btn href="#programme" variant="outline-dark">See the Programme</Btn>
+      </PageHero>
       <section className="section">
         <div className="container grid items-center gap-12 lg:grid-cols-2">
           <div>
             <Eyebrow>Overview</Eyebrow>
             <h2 className="mt-4 text-[length:var(--text-h2)]">About AFSE UK 2026</h2>
-            <p className="prose-justify mt-5">The African Food Summit & Expo UK 2026 is the first international edition of AFSE — held in London during Black History Month. It is both a strategic milestone and a deliberate positioning statement: Africa&apos;s food leadership belongs on the global stage, and London is where that conversation begins.</p>
-            <p className="prose-justify mt-4">The Summit convenes policymakers, agricultural leaders, culinary professionals, food entrepreneurs, media voices, and development stakeholders from across Africa and the United Kingdom — in a programme designed to move beyond conversation into coordination.</p>
-            <h3 className="mt-8 text-[20px]">What to Expect</h3>
+            <p className="prose-justify mt-5">The African Food Summit &amp; Expo comes to the UK for the first time. Making its UK debut during Black History Month, AFSE UK 2026 brings together people from across food, culture, business, sustainability, development and innovation to explore Africa&apos;s food story and where it is heading.</p>
+            <p className="prose-justify mt-4">This year&apos;s theme, &ldquo;{AFSE.theme}&rdquo;, looks at where our food traditions come from, what is happening across African food today, and how we can shape the future.</p>
+            <div className="mt-6 rounded-xl border-l-4 border-[color:var(--color-action)] bg-[color:var(--color-bg-alt)] p-5"><p className="text-[12px] font-semibold uppercase tracking-wide text-[color:var(--color-action)]">The panel question</p><p className="mt-2 text-[15px] text-[color:var(--color-text-strong)]">{AFSE.panel}</p></div>
+            <h3 id="programme" className="mt-8 scroll-mt-28 text-[20px]">What to Expect</h3>
             <ul className="list-red mt-3 space-y-1">{EXPECT.map((e) => <li key={e}>{e}</li>)}</ul>
           </div>
           <div className="flex justify-center lg:justify-end lg:pr-4"><div className="photo-frame"><Image src="/img/Summit.jpeg" alt="African Food Summit stage" width={520} height={390} className="w-full max-w-[520px] object-cover" /></div></div>
@@ -56,7 +61,7 @@ export default function Summit2026() {
         <div className="container">
           <h2 className="text-[length:var(--text-h2)] text-white">Be Part of AFSE UK 2026</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[14px] text-white/85">Whether you are a government body, a development institution, a food brand, or an individual leader, there is a role for you at Africa&apos;s most important international food summit in 2026.</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4"><Btn href="mailto:summit@afrifoodnetwork.com?subject=I%20would%20like%20to%20Request%20for%20the%20Partnership%20Deck">Request The Partnership Deck <Arrow /></Btn><Btn href="/contact" variant="outline-dark">Contact The Summit Team</Btn></div>
+          <div className="mt-8 flex flex-wrap justify-center gap-4"><Btn href={AFSE.tickets}>Get Your Free Ticket <Arrow /></Btn><Btn href="/partner-with-us" variant="outline-dark">Partner With Us</Btn></div>
         </div>
       </section>
     </>
