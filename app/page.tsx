@@ -132,7 +132,7 @@ export default function Home() {
       <section className="dark-section relative py-28 text-center" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(/img/Summit-Hero-1-scaled.png)", backgroundSize: "cover", backgroundPosition: "center" }}>
         <div className="container">
           <Eyebrow dark>Now accepting partnership applications</Eyebrow>
-          <h2 className="mx-auto mt-4 max-w-2xl text-[length:var(--text-h2)] leading-[1.2] text-white">October 2026. London. Black History Month.</h2>
+          <h2 className="mx-auto mt-4 max-w-2xl text-[length:var(--text-h2)] leading-[1.2] text-white">22 October 2026. Samsung KX. Black History Month.</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[14px] text-white/85">AFSE UK 2026 is now open for partnership engagement. We are working with governments, embassies, development institutions, and private sector brands to build Africa&apos;s most significant international food summit.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Btn href="mailto:summit@afrifoodnetwork.com?subject=I%20would%20like%20to%20Request%20for%20the%20Partnership%20Deck">Request The Partnership Deck <Arrow /></Btn>

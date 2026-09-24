@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import { Eyebrow, Btn, Arrow, Icon, PageHero } from "@/components/ui";
-export const metadata: Metadata = { title: "United by Food", description: "A Documentary Series by African Food Network. Pilot episode world premiere at AFSE UK 2026, London, October 2026." };
+export const metadata: Metadata = { title: "United by Food", description: "A Documentary Series by African Food Network. Pilot episode world premiere at AFSE UK 2026, Samsung KX London, 22 October 2026." };
 
 const WHY = [["target", "Identity", "A living archive of heritage, tradition, and belonging, built with communities, not just about them."], ["globe", "Soft Power", "Food as a cultural diplomacy tool that builds bridges across borders, generations, and diaspora communities."], ["users", "Unity", "A shared language that connects Africans across regions, nations, and the distances of migration."]];
 const PARTNER = [["landmark", "Government & Cultural Institutions", ["Cultural diplomacy and heritage preservation support", "Institutional endorsement and delegation participation", "Screening partnerships in the UK and across Africa"]], ["globe", "Embassies & Multilateral Bodies", ["Cross-cultural representation and pan-African solidarity", "Regional and diaspora screening collaborations", "Support for continental and international engagement"]], ["handshake", "Grant & Development Partners", ["Cultural documentation and heritage preservation funding", "Creative economy and storytelling programme support", "Research, learning, and global dissemination"]]] as const;
@@ -9,7 +9,7 @@ const PARTNER = [["landmark", "Government & Cultural Institutions", ["Cultural d
 export default function UBF() {
   return (
     <>
-      <PageHero eyebrow="Pilot Episode · World Premiere at AFSE UK 2026 · London, October 2026" title="United by Food" sub={<><p className="text-[18px] text-white">A Documentary Series by African Food Network</p><p className="mt-4">Across Africa and its diaspora, food has never been just nourishment.<br />It is memory. Identity. Belonging.<br />United by Food tells that story, to Africa and to the world.</p></>}>
+      <PageHero eyebrow="Pilot Episode · World Premiere at AFSE UK 2026 · 22 October 2026, London" title="United by Food" sub={<><p className="text-[18px] text-white">A Documentary Series by African Food Network</p><p className="mt-4">Across Africa and its diaspora, food has never been just nourishment.<br />It is memory. Identity. Belonging.<br />United by Food tells that story, to Africa and to the world.</p></>}>
         <Btn href="mailto:summit@afrifoodnetwork.com">Partnership & Screening Enquiries <Arrow /></Btn>
       </PageHero>
       <section className="section">
@@ -41,8 +41,8 @@ export default function UBF() {
             <p className="mt-4">The pilot episode was developed with 15+ contributors including chefs, cultural leaders, policymakers, and diaspora voices, across multiple African countries and diaspora communities.</p>
           </div>
           <div>
-            <Eyebrow>Premiere</Eyebrow><h2 className="mt-4 text-[length:var(--text-h2)]">World Premiere; October 2026, London</h2>
-            <p className="mt-4">The United by Food pilot will have its world premiere at AFSE UK 2026 in London, a curated institutional screening timed to coincide with Black History Month. Following the premiere, the film will be released publicly on YouTube for global accessibility.</p>
+            <Eyebrow>Premiere</Eyebrow><h2 className="mt-4 text-[length:var(--text-h2)]">World Premiere; 22 October 2026, London</h2>
+            <p className="mt-4">The United by Food pilot will have its world premiere at AFSE UK 2026 at Samsung KX in London on 22 October, a curated institutional screening timed to coincide with Black History Month. Following the premiere, the film will be released publicly on YouTube for global accessibility.</p>
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <div className="card p-6"><h3 className="text-[15px] font-semibold">Institutional Premiere</h3><ul className="list-red mt-3 space-y-1"><li>Curated screening at AFSE UK 2026, London</li><li>Invited government, embassy, and institutional stakeholders</li><li>Moderated post-screening conversation</li></ul></div>
               <div className="card p-6"><h3 className="text-[15px] font-semibold">Public Release</h3><ul className="list-red mt-3 space-y-1"><li>YouTube premiere timed to the London unveiling</li><li>Media amplification and curated distribution</li><li>Global reach across Africa and diaspora communities</li></ul></div>
