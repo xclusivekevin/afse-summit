@@ -19,5 +19,5 @@ export const AFSE = {
   panel: "How can Africa use technology to preserve its food heritage while building the food systems of tomorrow?",
   expect: ["Keynote Address", "Guest Speakers", "Expert Panel Discussion", "Africa Unity Dish", "AFSE Recognition", "Networking", "Food, Culture & Innovation Conversations"],
   presentedBy: "Uziiza, in collaboration with African Food Network",
-  supportedBy: ["African Tourism Board", "African Union"],
+  supportedBy: ["African Tourism Board"],
 };
